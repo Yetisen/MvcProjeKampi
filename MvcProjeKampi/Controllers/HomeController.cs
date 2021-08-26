@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace MvcProjeKampi.Controllers
 {
 
-    // işin backend kısmı c# tarafı yazılır//
+    // işin backend kısmı c# tarafı yazılır//// deneme 
     /*
     1)Entity Layer: projenin sql tarafındaki tabloların ve bu tabloların içerisinde yer alacak sütünların tanımlanacağı kısım tablolar class sütunlar property
     2)Data Access Layer: CRUD işlemleri burada tanımlanacak Filtreleme aslında listelemedir sadece bizim istediğim şartta yapılır
