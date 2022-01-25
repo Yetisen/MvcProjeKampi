@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcProjeKampi.Controllers
+namespace MvcProjeWeb.Controllers
 {
     public class TestController : Controller
     {

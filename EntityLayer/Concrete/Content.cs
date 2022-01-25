@@ -22,6 +22,7 @@ namespace EntityLayer.Concrete
 
         public int? WriterID { get; set; }//? boş da olabilir
         public virtual Writer Writer { get; set; }//writerdan bir writer değer alacaksın
+        public bool ContentStatus { get; set; }
 
 
 

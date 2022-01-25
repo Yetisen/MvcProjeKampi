@@ -15,12 +15,18 @@ namespace EntityLayer.Concrete
         public string WriterName { get; set; }
         [StringLength(50)]
         public string WriterSurName { get; set; }
-        [StringLength(100)]
+        [StringLength(250)]
         public string WriterImage { get; set; }
-        [StringLength(50)]
+        [StringLength(100)]//ekleme yaptım değişikliği veri tabanına migration üzerinden yansıtıcam
+        public string WriterAbout { get; set; }
+
+        [StringLength(200)]
         public string WriterMail { get; set; }
-        [StringLength(20)]
+        [StringLength(200)]//200 karaktere çıkardım çünkü şifreleyerek tutucam
         public string WriterPassword { get; set; }
+        [StringLength(50)]//add-migration mig_writertitle_add update-database +
+        public string WriterTitle { get; set; }
+        public bool WriterStatus { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
         public ICollection<Content> Contents { get; set; }//content e gönderecek

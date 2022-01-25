@@ -19,10 +19,11 @@ namespace EntityLayer.Concrete
         //yazar
 
         public int CategoryID { get; set; }
-        public virtual  Category  Category { get; set; }
+        public virtual Category Category { get; set; }
         public int WriterID { get; set; }//başlığı açan kişinin ID sini görmeliyim
         public virtual Writer Writer { get; set; }
 
         public ICollection<Content> Contents { get; set; }
+        public bool HeadingStatus { get; set; }
     }
 }

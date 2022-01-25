@@ -10,5 +10,6 @@ namespace DataAccessLayer.Abstract
     public interface ICategoryDal2 : IRepository<Category>//değer olarak bu sınıfı gönderecek
         //bu sayede hepsine aynı metodları yazmaktan kurtuldum
     {
+
     }
 }

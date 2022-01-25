@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcProjeKampi.Controllers
+namespace MvcProjeWeb.Controllers
 {
 
     // işin backend kısmı c# tarafı yazılır//// deneme 
@@ -39,6 +39,12 @@ namespace MvcProjeKampi.Controllers
             return View();
         }
         public ActionResult Text()
+        {
+
+            return View();
+        }
+        [AllowAnonymous]
+        public ActionResult HomePage()
         {
 
             return View();

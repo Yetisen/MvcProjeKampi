@@ -22,13 +22,23 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var deletedEntity = c.Entry(p);//silinecek olan parametreden gelen değerdir
+            deletedEntity.State = EntityState.Deleted;
+            //_object.Remove(p);
             c.SaveChanges();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)//silme işlemi için önce bulduruyoruz
+        {//id si 5 olan değer dediğim için tek değer döner
+            return _object.SingleOrDefault(filter);//bir dizide yada listede sadece 1 değer döndürmek için kul metod
         }
 
         public void Insert(T p)
         {
-            _object.Add(p);
+            var addedEntity = c.Entry(p);//güncelleme sırasında veri tabanına kaydolmuyordu onu çözeceğiz
+            addedEntity.State = EntityState.Added;
+
+           // _object.Add(p); //buna gerek kalmadı
             c.SaveChanges();
         }
 
@@ -44,7 +54,8 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T p)
         {
-            
+            var updatedEntity = c.Entry(p);
+            updatedEntity.State = EntityState.Modified;
             c.SaveChanges();
         }
     }
